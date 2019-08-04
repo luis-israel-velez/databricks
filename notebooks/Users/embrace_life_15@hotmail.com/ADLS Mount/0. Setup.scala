@@ -77,7 +77,7 @@ dbutils.fs.mount(
 // COMMAND ----------
 
 // uncomment and run this command to unmount
-// dbutils.fs.unmount("/mnt/datalake/")
+//dbutils.fs.unmount("/mnt/datalake/")
 
 // COMMAND ----------
 
@@ -95,3 +95,8 @@ print(sc.defaultParallelism)
 // COMMAND ----------
 
 spark.conf.set("spark.sql.shuffle.partitions", sc.defaultParallelism)
+
+// COMMAND ----------
+
+//Quick test
+dbutils.fs.ls("/mnt/datalake/adverts")
